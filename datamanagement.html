@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title v-text="title">Provance - Prototype - Data Management</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+        <link href="assets/styles/style.css" rel="stylesheet">
+    </head>
+
+
+	<body>
+		<header role="banner" class="l-header">
+			<!-- Logo -->
+			<a href="home.html" class="l-logo" title="IT Asset Management for Microsoft© System Center">
+				<img src="assets/images/ProvanceLogo2.png" align="top" />
+			</a>
+			<!-- Header Nav -->
+			<nav class="l-header-nav">
+				<ul class="m-dropdown-nav m-nav-header">
+					<li>
+						<a  href="#" ><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-user">
+							<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+							<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+							<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-language"></i> <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu" role="menu">
+							<li><a href="" ng-click="browseToLanguage('fr-ca')">Francais</a></li>
+							<li><a href="" ng-click="browseToLanguage('fr-fr')">Francais - France</a></li>
+							<li><a href="" ng-click="browseToLanguage('en-us')">English</a></li>
+							<li><a href="#">Other Language</a></li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu m-dropdown-alerts">
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-comment fa-fw"></i> New Comment
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-twitter fa-fw"></i> 3 New Followers
+										<div class="pull-right text-muted small">12 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Message Sent
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-tasks fa-fw"></i> New Task
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-upload fa-fw"></i> Server Rebooted
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">See All Alerts</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-tasks">
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 1</span>
+											<span class="pull-right text-muted">40% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+												<span class="sr-only">40% Complete (success)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 2</span>
+											<span class="pull-right text-muted">20% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+												<span class="sr-only">20% Complete</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 3</span>
+											<span class="pull-right text-muted">60% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+												<span class="sr-only">60% Complete (warning)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 4</span>
+											<span class="pull-right text-muted">80% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+												<span class="sr-only">80% Complete (danger)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">See All Tasks</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-messages">
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">Read All Messages</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main Nav -->
+		<nav class="l-main-nav">
+	        <ul class="m-dropdown-nav">
+				<li><a href="#"><span class="simplebold">Design Studio</span></a>
+					<ul class="sub-menu">
+	                    <li><a href="#">Analytics</a></li>
+					    <li><a href="#">Bar Codes</a></li>
+					    <li><a href="#">Business Rules</a></li>
+					    <li><a href="#">Collections</a></li>
+					    <li><a href="#">Connector</a></li>
+					    <li><a href="landing.html">Data Management</a></li>
+					    <li><a href="#">Notifications</a></li>
+					    <li><a href="#">User Interface</a></li>
+	                </ul>
+				</li>
+				<li><a href="#">Reports & Analytics</a></li>
+				<li><a href="home.html">ITAM</a></li>
+				<li><a href="#">Catalog</a></li>
+				<li><a href="#">Self Serve</a></li>
+				<li><a href="#">Support</a></li>
+	        </ul>
+	    </nav>
+
+	    <!-- Content -->
+		<div id="content" class="l-content v-datamanagement" role="main">	
+
+            <h1>Data Management</h1>
+            <h2>Tools to build and modify your design studio template for Import, Transform and Export</h2>
+
+            <div class="data-management-list">
+                <div>
+                    <a class="m-cell-nav" href="whichdata.html">
+                        <img src="http://dummyimage.com/250x250" alt="" />
+                        <span class="title">Import Template</span>
+                        <span>
+                            Rebum vituperatoribus sit ea, quando possit iisque ut sit. Affert ignota consetetur ex per. Illum congue scripta eu duo. Quem graece consetetur eam ad, id tollit cetero luptatum sed.
+                        </span>
+                        <span class="actions">
+                            <span class="m-btn">CREATE</span>
+                            <span class="m-btn">EDIT</span>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a class="m-cell-nav" href="whichdata.html">
+                        <img src="http://dummyimage.com/250x250" alt="" />
+                        <span class="title">Transform Template</i></span>
+                        <span>
+                            Rebum vituperatoribus sit ea, quando possit iisque ut sit. Affert ignota consetetur ex per. Illum congue scripta eu duo. Quem graece consetetur eam ad, id tollit cetero luptatum sed.
+                        </span>
+                        <span class="actions">
+                            <span class="m-btn">CREATE</span>
+                            <span class="m-btn">EDIT</span>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a class="m-cell-nav" href="whichdata.html">
+                        <img src="http://dummyimage.com/250x250" alt="" />
+                        <span class="title">Export Template</span>
+                        <span>
+                            Rebum vituperatoribus sit ea, quando possit iisque ut sit. Affert ignota consetetur ex per. Illum congue scripta eu duo. Quem graece consetetur eam ad, id tollit cetero luptatum sed.
+                        </span>
+                        <span class="actions">
+                            <span class="m-btn">CREATE</span>
+                            <span class="m-btn">EDIT</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+		</div>
+
+	</body>
+</html>

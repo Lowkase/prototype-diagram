@@ -1,0 +1,23 @@
+// --------------------------------------------------------------------------------
+// MODULES - OBJECT
+// --------------------------------------------------------------------------------
+.m-object                                   {}
+
+.m-object-canvas                            { padding:4px; position:relative; border-bottom:1px solid $color-gray-light; font-size:0.875em;
+    .title                                  { width:90%; @include text-truncate(); font-family:'OpenSans600', sans-serif; }
+    .description                            { width:90%; @include text-truncate(); }
+    .fa                                     { position:absolute; top:10px; right:10px; cursor:pointer; }
+}
+
+.m-object-drag                              { padding:4px; position:relative; border-bottom:1px solid $color-gray-light; font-size:0.875em; cursor:pointer;
+    .title                                  { width:90%; @include text-truncate(); font-family:'OpenSans600', sans-serif; }
+    .description                            { width:90%; @include text-truncate(); }
+    .fa                                     { position:absolute; top:10px; right:10px; }
+    &.ui-draggable-dragging                 { width:100px; height:100px; padding:10px; overflow:hidden; list-style-type:none; opacity:0.8; background-color:#eeeeef; color:black; font-size:0.813em; border:1px solid #346789; @include border-radius-all(3px);
+        .title                              { text-align:center; }
+        .description 						{ display:none;}
+        .fa                                 { display:none; }
+    }
+}
+
+.is-object-canvas-focal                     { background:$color-blue-extralight; }

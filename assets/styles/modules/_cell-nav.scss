@@ -1,0 +1,11 @@
+// --------------------------------------------------------------------------------
+// MODULES - CELL NAV
+// --------------------------------------------------------------------------------
+.m-cell-nav									{ color:$color-gray-dark; text-decoration:none;
+	span 									{ display:block; font-size:0.875em; }
+	img 									{ width:100%; }	
+	.title 			 						{ margin-top:5px; margin-bottom:10px; color:$color-blue-normal; font-size:1.250em; font-family:'OpenSans700', sans-serif; }
+	.actions 								{ @include cf(); margin-top:10px;
+		.m-btn 								{ margin-right:20px; float:left; }
+	}	
+}

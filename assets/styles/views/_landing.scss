@@ -1,0 +1,8 @@
+// --------------------------------------------------------------------------------
+// VIEWS - LANDING
+// --------------------------------------------------------------------------------
+.v-landing									{ padding:20px; overflow-y:auto;
+	.template-list							{ @include cf(); margin-top:20px; margin-bottom:20px;
+		> div 								{ @include col(1/4); }
+	}
+}

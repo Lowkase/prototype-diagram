@@ -1,0 +1,7 @@
+// --------------------------------------------------------------------------------
+// MODULES - BUTTONS
+// --------------------------------------------------------------------------------
+.m-btn 										{ width:100px; min-width:100px; padding:10px 10px; background:$color-blue-normal; color:$color-white-normal; text-align:center; font-size:0.750em; cursor:pointer; 
+	i 										{ margin-left:10px; }
+}
+.m-btn:hover 								{ background:$color-blue-light; color:#fff; }

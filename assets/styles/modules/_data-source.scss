@@ -1,0 +1,29 @@
+// --------------------------------------------------------------------------------
+// MODULES - DATA SOURCE
+// --------------------------------------------------------------------------------
+.m-data-source 								{ margin-bottom:5px; font-size:0.875em;
+	.title 									{ padding:5px; background:$color-gray-extralight; border-bottom:1px solid $color-gray-light; }
+	li 										{ position:relative; background:$color-white-normal; border-top:1px solid $color-gray-light; cursor:pointer;
+		div 								{ width:85%; padding:5px; @include text-truncate(); }
+		i 									{ position:absolute; top:5px; right:5px; color:$color-gray-extralight; 
+			&.mapped 						{ color:$color-green-normal; }
+		}
+	}
+	li:first-child 							{ border-top:0; }
+	li:hover 								{ background:$color-gray-light; color:$color-white-normal; }
+	li.not-verified 						{ background:$color-orange-light; color:$color-gray-normal; }
+}
+
+.m-data-source-drag                         {
+    &.ui-draggable-dragging                 { width:160px; height:22px; padding:5px; overflow:hidden; font-size:0.750em; border:1px solid $color-gray-light; }
+}
+
+.m-add-data-source 							{ width:60%; margin:0 auto; padding:5px; text-align:center; background:$color-gray-normal; color:$color-white-normal; font-size:0.813em; cursor:pointer;
+	&:hover 								{ background:$color-gray-dark; color:$color-white-normal; }
+}
+
+.m-data-source-placeholder 					{ padding:20px; text-align:center; cursor:pointer;
+	> div 									{ margin-bottom:20px; }
+	> i 									{ margin-bottom:10px; font-size:2em; }
+	> p 									{ font-size:0.750em; }
+}

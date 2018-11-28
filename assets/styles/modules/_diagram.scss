@@ -1,0 +1,35 @@
+// --------------------------------------------------------------------------------
+// MODULES - DIAGRAM
+// --------------------------------------------------------------------------------
+.m-diagram									{ position:absolute; top:0; right:0; bottom:0; left:0; text-align:center;
+
+    ._jsPlumb_drag_select *                 { @include user-select(none); }
+    ._jsPlumb_overlay                       { z-index:20; }
+    ._jsPlumb_connector                     { z-index:4; }
+    ._jsPlumb_connected                     { border:2px solid green; }
+    ._jsPlumb_endpoint                      { z-index:21; cursor:default; }
+
+    .jsplumb-drag                           { border:1px solid $color-blue-normal !important; } 
+
+    .jsplumb-con                            { width:100%; height:100%; position:relative; overflow:auto; }
+
+    .connection-action                      { width:15px; height:15px; background:#61B7CF; cursor:pointer; 
+        ._jsPlumb_hover                     { background:#5C96BC; color:$color-white-normal; border:1px solid white; }
+    }
+
+    .window                                 { width:100px; height:100px; padding:10px; position:absolute; z-index:20; overflow-y:auto; text-align:center; opacity:0.8; background-color:$color-gray-extralight; color:$color-gray-dark; font-size:0.9em; border:1px solid $color-gray-normal; @include border-radius-all(3px); 
+        &:hover                             { background:$color-gray-light; border:1px solid $color-gray-dark; cursor:pointer; }
+        > div                               { width:100%; height:100%; position:relative;
+            .fa                             { position:absolute; bottom:0; right:0; font-size:1.5em; }
+        }
+    }
+    
+    .is-window-focal                        { background:$color-blue-normal; color:$color-white-normal; }
+    .is-window-focal:hover                  { background:$color-blue-normal; opacity:1; }
+
+    .is-window-focal-active                 { background:$color-blue-normal !important; opacity:1; }
+    .is-window-focal-active:hover           { background:$color-blue-normal !important; opacity:1; }
+
+    .is-window-active                       { background:$color-gray-normal !important; color:$color-white-normal; opacity:1; }
+    .is-window-active:hover                 { background:$color-gray-normal !important; color:$color-white-normal; opacity:1; }
+}

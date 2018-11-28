@@ -1,0 +1,15 @@
+// --------------------------------------------------------------------------------
+// MODULES - PROPERTY
+// --------------------------------------------------------------------------------
+.m-property                                 {
+    li                                      { @include cf(); border-bottom:1px solid $color-gray-light; font-size:0.875em;
+        > div                               { padding:4px; float:left; }
+        .title                              { width:120px; @include text-truncate(); }
+        .mapping                            { width:190px; min-height:25px; @include text-truncate(); border-left:1px solid $color-gray-light; cursor:pointer; }
+    }
+    li:last-child 							{ border-bottom:0; }
+}
+
+.m-active-properties-list					{ @include text-truncate();
+	.active-properties-list 				{}		
+}

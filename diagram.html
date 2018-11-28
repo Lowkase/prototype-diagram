@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title v-text="title">Provance - Prototype - Diagram</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+        <link href="assets/styles/style.css" rel="stylesheet">
+    </head>
+
+
+	<body class="v-home">
+		<header role="banner" class="l-header">
+			<!-- Logo -->
+			<a href="home.html" class="l-logo" title="IT Asset Management for Microsoft© System Center">
+				<img src="assets/images/ProvanceLogo2.png" align="top" />
+			</a>
+			<!-- Header Nav -->
+			<nav class="l-header-nav">
+				<ul class="m-dropdown-nav m-nav-header">
+					<li>
+						<a  href="#" ><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-user">
+							<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+							<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+							<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-language"></i> <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu" role="menu">
+							<li><a href="" ng-click="browseToLanguage('fr-ca')">Francais</a></li>
+							<li><a href="" ng-click="browseToLanguage('fr-fr')">Francais - France</a></li>
+							<li><a href="" ng-click="browseToLanguage('en-us')">English</a></li>
+							<li><a href="#">Other Language</a></li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu m-dropdown-alerts">
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-comment fa-fw"></i> New Comment
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-twitter fa-fw"></i> 3 New Followers
+										<div class="pull-right text-muted small">12 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Message Sent
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-tasks fa-fw"></i> New Task
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<i class="fa fa-upload fa-fw"></i> Server Rebooted
+										<div class="pull-right text-muted small">4 minutes ago</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">See All Alerts</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-tasks">
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 1</span>
+											<span class="pull-right text-muted">40% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+												<span class="sr-only">40% Complete (success)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 2</span>
+											<span class="pull-right text-muted">20% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+												<span class="sr-only">20% Complete</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 3</span>
+											<span class="pull-right text-muted">60% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+												<span class="sr-only">60% Complete (warning)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<p>
+											<span class="simplebold">Task 4</span>
+											<span class="pull-right text-muted">80% Complete</span>
+										</p>
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+												<span class="sr-only">80% Complete (danger)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">See All Tasks</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a  href="#"><i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown-messages">
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<span class="simplebold">John Smith</span>
+										<span class="pull-right text-muted">
+											<em>Yesterday</em>
+										</span>
+									</div>
+									<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+								</a>
+							</li>
+							<li>
+								<a class="text-center" href="#">
+									<span class="simplebold">Read All Messages</span>
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main Nav -->
+		<nav class="l-main-nav">
+	        <ul class="m-dropdown-nav">
+				<li><a href="#"><span class="simplebold">Design Studio</span></a>
+					<ul class="sub-menu">
+	                    <li><a href="#">Analytics</a></li>
+					    <li><a href="#">Bar Codes</a></li>
+					    <li><a href="#">Business Rules</a></li>
+					    <li><a href="#">Collections</a></li>
+					    <li><a href="#">Connector</a></li>
+					    <li><a href="landing.html">Data Management</a></li>
+					    <li><a href="#">Notifications</a></li>
+					    <li><a href="#">User Interface</a></li>
+	                </ul>
+				</li>
+				<li><a href="#">Reports & Analytics</a></li>
+				<li><a href="home.html">ITAM</a></li>
+				<li><a href="#">Catalog</a></li>
+				<li><a href="#">Self Serve</a></li>
+				<li><a href="#">Support</a></li>
+	        </ul>
+	    </nav>
+
+	    <!-- Content -->
+		<div id="content" class="l-content" role="main">	
+
+	        <div class="v-diagram">
+
+	            <!-- HEADER -->
+	            <div class="v-header">
+	                <div class="left">
+	                    <ul>
+	                        <li><div class="nav-import"><i class="fa fa-arrow-circle-down"></i> Import Data Set</div></li>
+	                        <li><div class="nav-verify"><i class="fa fa-check"></i> Verify</div></li>
+	                        <li><div class="nav-save"><i class="fa fa-floppy-o"></i> Save Template</div></li>
+	                        <li><div class="nav-other">Other Options <i class="fa fa-caret-down"></i></div></li>
+	                    </ul>
+	                </div>
+	                <div class="right">
+	                    <ul>
+	                        <li><i class="fa fa-arrows-alt nav-zoom"></i></li>
+	                        <li><i class="fa fa-cog nav-options"></i></li>
+	                        <li><i class="fa fa-question-circle nav-help"></i></li>
+	                    </ul>
+	                </div>
+	            </div>
+
+	            <!-- SECTION -->
+	            <div class="section">
+
+	                <div class="data">
+	                    <div class="data-con">
+
+	                        <div class="data-list">
+	                            <div class="list-panel-con">
+	                                <div class="header import-data-set-header">Imported Data Set(s)</div>
+	                                <div class="list">
+	                                    <div class="list-con">
+	                                        <div class="m-data-source">
+	                                            <div class="title">My Imported Data</div>
+	                                            <div class="verify-msg">
+	                                                <div class="verify-msg-fail">
+	                                                    <i class="fa fa-thumbs-o-down"></i>
+	                                                    <span class="verify-msg-objs">999</span>
+	                                                    <span>unassociated objects</span>
+	                                                </div>
+	                                                <div class="verify-msg-success">
+	                                                    <i class="fa fa-thumbs-o-up"></i>
+	                                                    <span>All objects associated</spa>
+	                                                </div>
+	                                            </div>
+	                                            <ul class="m-data-source-list"></ul>
+	                                        </div>
+	                                        <div class="m-add-data-source">Add More</div>
+	                                    </div>
+	                                </div>
+	                                <div class="search">
+	                                    <div class="m-search">
+	                                        <input type="text" name="search" placeholder="search data set" />
+	                                        <i class="fa fa-search"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                        <div class="data-list-placeholder">
+	                            <div class="m-data-source-placeholder">
+	                                <div>Import Data Set</div>
+	                                <i class="fa fa-arrow-circle-down"></i>
+	                                <p>(file types: CSV, SQL, LDAP, Web Service, ODBC)</p>
+	                            </div>
+	                        </div>
+
+	                    </div>
+	                </div>
+
+	                <div class="objects">
+	                    <div class="objects-con">
+
+	                        <div class="properties-list">
+	                            <div class="list-panel-con">
+	                                <div class="header">
+	                                    <div class="m-active-properties-list">Properties: <span class="active-properties-list"></span></div>
+	                                    <i class="fa fa-caret-right properties-list-menu-caret"></i>
+	                                </div>
+	                                <div class="list">
+	                                    <div class="list-con">
+	                                        <ul class="m-property"></ul>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                        <div class="object-list">
+	                            <div class="list-panel-con">
+	                                <div class="header">Canvas Objects (<span class="counter-canvas-objects">9999</span>)</div>
+	                                <div class="list">
+	                                    <div class="list-con">
+	                                        <ul class="m-object"></ul>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                        <div class="hardware-list">
+	                            <div class="list-panel-con">
+	                                <div class="header">Hardware Class Objects (<span class="counter-hardware-objects">9999</span>)</div>
+	                                <div class="list">
+	                                    <div class="list-con">
+	                                        <ul class="m-object"></ul>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                        <div class="all-objects-list">
+	                            <div class="list-panel-con">
+	                                <div class="header">All Objects</div>
+	                                <div class="list">
+	                                    <div class="list-con">
+	                                        <ul class="m-object"></ul>
+	                                    </div>
+	                                </div>
+	                                <div class="search">
+	                                    <div class="m-search">
+	                                        <input type="text" name="search" placeholder="search data set" />
+	                                        <i class="fa fa-search"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                    </div>
+	                </div>
+
+	                <div class="diagram">
+	                    <div class="diagram-con">
+	                        <div class="m-diagram">
+	                            <div class="jsplumb-con"></div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="object-options">
+	                    <div class="object-options-con">
+	                        <ul>
+	                            <li>
+	                                <div class="check"><input id="object-focal-checkbox" type="checkbox" name="focalobject" value="focalobject"/></div>
+	                                <div class="label">Focal object</div>
+	                                <div class="more"></div>
+	                            </li>
+	                            <li>
+	                                <div class="check">&nbsp;</div>
+	                                <div class="label">Destination object class: Computer</div>
+	                                <div class="more"></div>
+	                            </li>
+	                            <li>
+	                                <div class="check">&nbsp;</div>
+	                                <div class="label">Destination object name: Supplier</div>
+	                                <div class="more"></div>
+	                            </li>
+	                            <li id="object-options-create">
+	                                <div class="check">&nbsp;</div>
+	                                <div class="label">Create or update</div>
+	                                <div class="more"><i class="fa fa-caret-right"></i></div>
+	                            </li>
+	                            <li>
+	                                <div class="check">&nbsp;</div>
+	                                <div class="label">Add Value</div>
+	                                <div class="more"></div>
+	                            </li>
+	                        </ul>
+	                        <div class="triangle"></div>
+	                    </div>
+	                </div>
+
+	                <div class="object-options-secondary">
+	                    <div class="object-options-secondary-con">
+	                        <ul class="secondary">
+	                            <li>Create only</li>
+	                            <li>Create or update</li>
+	                            <li>Update only</li>
+	                            <li>Delete</li>
+	                            <li>Reference object</li>
+	                            <li>Reference instance</li>
+	                        </ul>
+	                        <div class="triangle"></div>                        
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+
+
+	        <div class="m-modal m-modal-add-relationship">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Add Relationship</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    <div class="m-form-ctrl endpoint-1">
+	                        <label>Endpoint Object 1 (from):</label>
+	                        <div class="m-modal-add-relationship-endpoint-object-1"></div>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Endpoint Object 2 (to):</label>
+	                        <select class="m-modal-add-relationship-endpoint-object-2">
+	                        </select>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Name:</label>
+	                        <div class="m-modal-add-relationship-name-con">
+	                            <input class="m-modal-add-relationship-name" type="text" name="name" />  
+	                            <div></div>
+	                        </div>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Class:</label>
+	                        <select class="m-modal-add-relationship-class">
+	                            <option>Object 1</option>
+	                            <option>Object 2</option>
+	                            <option>Object 3</option>
+	                            <option>Object 4</option>
+	                        </select>
+	                    </div>
+	                    <div class="m-form-ctrl processing-options">
+	                        <label>Processing Options:</label>
+	                        <div><input id="m-modal-add-relationship-default-radio" type="radio" name="m-modal-add-relationship-processing-options" value="Create" checked>Create</div>
+	                        <div><input type="radio" name="m-modal-add-relationship-processing-options" value="CreateOrUpdate">Create Or Update</div>
+	                        <div><input type="radio" name="m-modal-add-relationship-processing-options" value="UpdateOnly">Update Only</div>
+	                        <div><input type="radio" name="m-modal-add-relationship-processing-options" value="Delete">Delete</div>
+	                    </div>
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-apply">Apply</div>
+	                    <div class="m-btn m-modal-close">Cancel</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="m-modal m-modal-edit-relationship">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Edit Relationship</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    <div class="m-form-ctrl endpoint-1">
+	                        <label>Endpoint Object 1 (from):</label>
+	                        <div class="m-modal-edit-relationship-endpoint-object-1"></div>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Endpoint Object 2 (to):</label>
+	                        <select class="m-modal-edit-relationship-endpoint-object-2">
+	                        </select>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Name:</label>
+	                        <div class="m-modal-edit-relationship-name-con">
+	                            <input class="m-modal-edit-relationship-name" type="text" name="name" />
+	                            <div></div>
+	                        </div>
+	                    </div>
+	                    <div class="m-form-ctrl">
+	                        <label>Class:</label>
+	                        <select class="m-modal-edit-relationship-class">
+	                            <option>Object 1</option>
+	                            <option>Object 2</option>
+	                            <option>Object 3</option>
+	                            <option>Object 4</option>
+	                        </select>
+	                    </div>
+	                    <div class="m-form-ctrl processing-options">
+	                        <label>Processing Options:</label>
+	                        <div><input id="m-modal-edit-relationship-default-radio" type="radio" name="m-modal-edit-relationship-processing-options" value="Create">Create</div>
+	                        <div><input type="radio" name="m-modal-edit-relationship-processing-options" value="CreateOrUpdate">Create Or Update</div>
+	                        <div><input type="radio" name="m-modal-edit-relationship-processing-options" value="UpdateOnly">Update Only</div>
+	                        <div><input type="radio" name="m-modal-edit-relationship-processing-options" value="Delete">Delete</div>
+	                    </div>
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-apply">Apply</div>
+	                    <div class="m-btn m-modal-delete">Delete</div>
+	                    <div class="m-btn m-modal-close">Cancel</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="m-modal m-modal-upload">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Upload</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    
+	                    <div class="m-form-ctrl">
+	                        <label>File Type:</label>
+	                        <select>
+	                            <option>Choose file type...</option>
+	                            <option>CSV</option>
+	                            <option>SQL</option>
+	                            <option>LDAP</option>
+	                            <option>Web Service</option>
+	                            <option>ODBC</option>
+	                        </select>
+	                        <div class="filetype">(CSV, SQL, LDAP, Web Service, ODBC)</div>
+	                    </div>
+
+	                    <div class="m-form-ctrl">
+	                        <div class="dragdrop">Drag and Drop file from your computer here.</div>
+	                    </div>
+
+	                    <div class="m-form-ctrl">
+	                        <label>Import Data Set from URL:</label>
+	                        <input type="text" name="url" />  
+	                    </div>
+
+	                    <div class="m-form-ctrl">
+	                        <label>Import local file:</label>
+	                        <input type="text" name="local" />
+	                        <div class="m-btn">browse</div>
+	                    </div>
+
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-upload">Upload</div>
+	                    <div class="m-btn m-modal-close">Cancel</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="m-modal m-modal-rules">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Combined Objects</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    <ul class="m-rule-list"></ul>
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-apply">Apply</div>
+	                    <div class="m-btn m-modal-close">Cancel</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="m-modal m-modal-delete-rule">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Delete Connection</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    <div class="m-modal-delete-rule-text"></div>
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-apply">Yes</div>
+	                    <div class="m-btn m-modal-close">No</div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="m-modal m-modal-info-message">
+	            <div class="modal-dialog">
+	                <div class="modal-header">
+	                    <div>Warning</div>
+	                    <i class="fa fa-close m-modal-close"></i>
+	                </div>
+	                <div class="modal-body m-form">
+	                    <div class="m-modal-info-message-text"></div>
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="m-btn m-modal-close">Ok</div>
+	                </div>
+	            </div>
+	        </div>
+
+		</div>
+
+
+        <!-- JQUERY -->
+        <script src="assets/scripts/libs/jquery.min.js"></script>
+        <script src="assets/scripts/libs/jquery-ui.min.js"></script>
+
+        <script src="assets/scripts/init.js"></script>
+        <script src="assets/scripts/libs/jsPlumb.js"></script>
+        <script src="assets/scripts/views/diagram.js"></script>
+        <script src="assets/scripts/views/objects.js"></script>
+        <script src="assets/scripts/views/mapping.js"></script>
+        <script src="assets/scripts/modals/modal-add-relationship.js"></script>
+        <script src="assets/scripts/modals/modal-edit-relationship.js"></script>
+        <script src="assets/scripts/modals/modal-upload.js"></script>
+        <script src="assets/scripts/modals/modal-rules.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                startApp();
+            });
+        </script>
+
+	</body>
+</html>

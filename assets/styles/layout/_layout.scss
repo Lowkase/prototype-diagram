@@ -1,0 +1,11 @@
+// --------------------------------------------------------------------------------
+// LAYOUT 
+// --------------------------------------------------------------------------------
+.l-content 									{ position:absolute; top:94px; right:0; bottom:0; left:0;
+	.l-workspace 							{ width:300px; position:absolute; top:0; bottom:0; left:20px; font-size:0.8em; }
+	.l-view 								{ min-width:684px; position:absolute; top:0; right:0; bottom:0; left:340px; background-color:white; margin-left:10px; }
+	.l-view-con 							{ width:100%; height:100%; position:relative; }
+	.l-app-actions							{ position:absolute; top:0; right:0; left:0; }
+	.l-app-view								{ position:absolute; top:70px; right:0; bottom:0; left:0; overflow-y:auto; }
+	.l-view-content							{ width:100%; padding:20px; background:$color-blue-extraextralight; }	
+}

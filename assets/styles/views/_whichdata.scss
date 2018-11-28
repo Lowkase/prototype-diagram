@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------------
+// VIEWS - WHICH DATA
+// --------------------------------------------------------------------------------
+.v-whichdata								{ padding:20px; overflow-y:auto;
+	h2 										{ margin-bottom:0; }
+	p 										{ margin:0; }
+
+	.asset-type								{
+		.select-asset 						{ @include cf(); margin-top:20px;
+			li 								{ margin-right:10px; float:left; }
+		}
+	}
+	
+	.details 								{ margin-top:40px; display:none; 
+		.details-radios						{ margin-top:10px; font-size:0.813em; 
+			span 							{ margin-left:10px; }
+		}
+	}
+	
+	.focal-object 							{ margin-top:40px; display:none;
+		select 								{ margin-top:5px; }
+		.another-focal-object				{ margin-top:10px; color:$color-blue-normal; font-size:0.688em; font-family:'OpenSans600', sans-serif; cursor:pointer; }
+		.focal-object-list-close 			{ margin-left:5px; cursor:pointer; }
+	}
+	
+	.continue 								{ margin-top:20px; display:none; }
+}

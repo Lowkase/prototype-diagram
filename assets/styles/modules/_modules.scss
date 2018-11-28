@@ -1,0 +1,98 @@
+// --------------------------------------------------------------------------------
+// MODULES - WORKSPACE
+// --------------------------------------------------------------------------------
+
+.simplebold 								{ font-family:'OpenSans600', sans-serif; }
+
+.verify-msg 								{ display:none; color:$color-white-normal;
+	> div 									{ padding:5px; border-bottom:1px solid $color-gray-light; }
+	.verify-msg-fail 						{ display:none; background:$color-orange-normal; }
+	.verify-msg-success 					{ display:none; background:$color-green-normal; }
+}
+
+.m-tree-nav 								{ width:300px; margin:0 auto; padding:10px; background:$color-blue-extraextralight;
+	li  									{ margin-bottom:5px; position:relative; list-style:none;
+		input								{ position:absolute; left:0; margin-left:0; opacity:0; z-index:2; cursor:pointer; height:1em; width:1em; top:0; }
+		input + ul 							{ background:url(../Images/caret-right.png) 40px -1px no-repeat; margin:-0.938em 0 0 -44px; height:1em; }
+		input + ul > li 					{ margin-bottom:7px !important; display:none; margin-left:-14px !important; padding-left:1px; }
+		label 								{ cursor:pointer; display:block; padding-left:15px; }
+		input:checked + ul 					{ height:auto; background:url(../Images/caret-down.png) 40px 5px no-repeat; margin:-1.25em 0 0 -44px; padding:1.563em 0 0 80px; }
+		input:checked + ul > li 			{ margin-bottom:7px; display:block; margin:0 0 0.125em; }
+		input:checked + ul > li:last-child 	{ margin:0 0 0.063em; }
+		a 									{ text-decoration:none; }
+	}
+	li.file 								{ margin-left:-1px !important; 
+		a 									{ background:url(../Images/document.png) 0 0 no-repeat; color:#fff; padding-left:21px; text-decoration:none; display:block; }
+		a[href *= '.pdf']					{ background:url(../Images/document.png) 0 0 no-repeat; }
+		a[href *= '.html']					{ background:url(../Images/document.png) 0 0 no-repeat; }
+		a[href $= '.css']					{ background:url(../Images/document.png) 0 0 no-repeat; }
+		a[href $= '.js']					{ background:url(../Images/document.png) 0 0 no-repeat; }
+	}
+	.fa 									{ margin-right:10px; font-size:1.5em; }
+}
+
+.m-dropdown-nav 							{ @include cf(); 
+	a 										{ color:$color-blue-dark; }
+	a:link 									{ text-decoration:none; }
+
+	li 										{ margin-right:20px; float:left; display:block; position:relative; font-size:0.875em; }
+	li:hover .sub-menu li 					{ display:block; position:relative; }
+	
+	.sub-menu 								{ width:200px; position:absolute; left:0px; z-index:999; background:$color-blue-extralight;
+		li 									{ width:100%; padding:5px 10px; display:none; border-left:1px solid $color-blue-dark; border-right:1px solid $color-blue-dark; }
+		li:hover 							{ background-color:$color-blue-normal; color:$color-white-normal;
+			a 								{ color:$color-white-normal; }
+		}
+		li:first-child						{ border-top:1px solid $color-blue-dark; }
+		li:last-child 						{ border-bottom:1px solid $color-blue-dark; }
+	}
+}
+
+// .m-nav-header needs to be declared under m-dropdown-nav as we are doing overrides on .m-dropdown-nav
+.m-nav-header								{ margin-top:20px;
+	li 										{ margin-right:20px; float:right; }
+	li:first-child 							{ margin-right:10px; }
+	li:last-child 							{ margin-left:0; }
+	.sub-menu 								{ width:260px; left:-230px; 
+		li 									{ float:none; }
+	}
+}
+
+// .m-dropdown-alerts needs to be declared under m-dropdown-nav as we are doing overrides on .m-dropdown-nav
+.m-dropdown-alerts 							{
+	li a > div 								{ @include cf(); }
+	li a > div > i							{ @include col(.5); }
+	li a > div > div						{ @include col(.5); }
+}
+
+.m-app-nav									{ @include cf(); padding-bottom:3px; background-color:$color-white-normal; border-bottom:3px solid $color-gray-extralight;
+	.m-dropdown-nav 						{
+		li 									{ margin:0 10px; }
+	}
+	.m-app-nav-left 						{ @include span(.5); 
+		li 									{ margin:0; font-family:'OpenSans600', sans-serif; }
+		li:first-child 						{ margin-left:0; }
+		li:after							{ content: "\00a0\00a0|\00a0\00a0"; }
+		li:last-child:after					{ content: ""; }
+
+		.sub-menu 							{ width:100px;
+			li:after 						{ content:""; }
+		}
+	}
+	.m-app-nav-right 						{ @include span(.5); 
+		li 									{ float:right; }
+		.fa 								{ font-size:1.125em; }
+	}
+}
+
+.m-tasks-nav								{ margin-bottom:20px; 
+	li a 									{ color:$color-blue-normal; font-size:0.875em; }
+}
+
+.m-breadcrumbs-nav 							{ @include cf(); margin-top:5px; margin-bottom:20px;
+	li 										{ float:left; display:block; font-size:0.750em; }
+	li:after								{ content: "\00a0\00a0/\00a0\00a0"; }
+	li:last-child:after						{ content: ""; }
+	a 										{ text-decoration:none; }
+	a[disabled="disabled"] 					{ pointer-events:none; color:$color-gray-normal; cursor:pointer }
+}

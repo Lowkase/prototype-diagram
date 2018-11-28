@@ -1,0 +1,8 @@
+// --------------------------------------------------------------------------------
+// VIEWS - DATA MANAGEMENT
+// --------------------------------------------------------------------------------
+.v-datamanagement							{ padding:20px; overflow-y:auto;
+	.data-management-list					{ @include cf(); margin-bottom:20px;
+		> div 								{ @include col(1/3); }
+	}
+}

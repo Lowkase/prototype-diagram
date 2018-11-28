@@ -1,0 +1,13 @@
+// --------------------------------------------------------------------------------
+// HEADER 
+// --------------------------------------------------------------------------------
+.l-header 									{ @include cf(); background:$color-white-normal;
+	.l-logo 								{ @include span(.4); 
+		img 								{ margin:10px 0 10px 10px; }
+	}
+	.l-header-nav 							{ @include span(.6); }
+}
+
+.l-main-nav 								{ @include cf(); background:$color-blue-extralight; 
+	.m-dropdown-nav 						{ padding:10px; }
+}

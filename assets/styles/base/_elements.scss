@@ -1,0 +1,25 @@
+/* -------------------------------------------------------------------------------- */
+/* HTML KEYWORDS
+/* -------------------------------------------------------------------------------- */
+html                                        { box-sizing:border-box; -webkit-text-size-adjust:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+    ::-moz-selection                        { background:#b3d4fc; text-shadow:none; } /* Hightligt */
+    ::selection                             { background:#b3d4fc; text-shadow:none; } /* Hightligt */
+    ::-webkit-scrollbar 					{ width:8px; height:8px; background:$color-white-dark; }
+    ::-webkit-scrollbar-thumb				{ background:$color-gray-light; }
+}
+
+*, *:before, *:after 						{ box-sizing: inherit; }
+
+body                                        { 	min-width:1024px; 
+												margin:0 auto; 
+												color:$color-gray-dark;
+												font-family:'OpenSans300', sans-serif; 
+												font-size:16px;
+}
+
+ul                                          { list-style-type:none; margin:0; padding:0; }
+li 											{ list-style-type:none; }
+
+h1 											{ margin-top:0; color:$color-blue-normal; }
+h2 											{ margin:0 0 10px 0; color:$color-blue-normal; font-weight:300; }
+p 											{ margin: 5px 0; }

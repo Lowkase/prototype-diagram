@@ -1,0 +1,14 @@
+// --------------------------------------------------------------------------------
+// MODULES - FORM
+// --------------------------------------------------------------------------------
+.m-form 									{
+	.m-form-ctrl 							{ margin-bottom:20px; 
+		label 								{ margin-bottom:5px; display:block; font-family:'OpenSans600', sans-serif; }
+	}
+	.filetype 								{ margin-top:3px; font-size:0.625em; font-family:'OpenSans300', sans-serif; }
+	.actions 								{ @include cf(); margin-top:10px; }
+	.m-btn 									{ margin-top:5px; margin-left:20px; float:right; }
+
+	.validation								{ display:none; }
+	.required 								{ font-size:0.750em; }	
+}

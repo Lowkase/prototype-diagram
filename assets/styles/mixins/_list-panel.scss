@@ -1,0 +1,22 @@
+/* -------------------------------------------------------------------------------- */
+/* MIXINS - LIST PANEL
+/* -------------------------------------------------------------------------------- */
+@mixin list-panel-con () 					{ width:100%; height:100%; position:relative; }
+
+@mixin list-panel($top, $bottom, $isSearch) { position:absolute; top:$top; right:0; bottom:$bottom; left:0;
+	.list-panel-con 						{ width:100%; height:100%; position:relative; 
+		.header 							{ padding:5px; position:absolute; top:0; right:0; left:0; border-top:3px solid $color-gray-light; border-bottom:1px solid $color-gray-light; font-family:'OpenSans600', sans-serif; }
+
+		@if $isSearch == true  				{
+			.list 							{ position:absolute; top:30px; right:0; bottom:28px; left:0; }
+		} @else 							{
+			.list 							{ position:absolute; top:30px; right:0; bottom:0; left:0; }
+		}
+		
+		.list-con 							{ width:100%; height:100%; position:relative; overflow-y:auto; }
+
+		@if $isSearch == true  				{
+			.search 						{ width:100%; height:29px; padding:4px 7px 0 7px; position:absolute; bottom:0; left:0; }
+		}
+	}	
+}

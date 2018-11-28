@@ -1,0 +1,13 @@
+// --------------------------------------------------------------------------------
+// MODULES - RULE LIST
+// --------------------------------------------------------------------------------
+.m-rule-list								{
+	li 										{ @include cf(); padding:10px; background:$color-white-dark; border-bottom:1px solid $color-gray-light; }
+	.m-modal-rules-delete 					{ @include col(.05); 
+		i 									{ cursor:pointer; }
+	}
+	.property 								{ margin-top:3px; @include col(.45); @include text-truncate(); font-size:0.813em; }
+	.rule 									{ margin-top:2px; @include col(.5); 
+		select 								{ width:100%; }
+	}
+}
